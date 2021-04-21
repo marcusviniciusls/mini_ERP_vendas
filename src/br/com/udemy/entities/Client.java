@@ -1,9 +1,12 @@
 package br.com.udemy.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Client {
-
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	// Atributos
 	private String name;
 	private String email;
@@ -37,4 +40,9 @@ public class Client {
 		this.birthDate = birthDate;
 	}	
 	
+	// Método toString
+	public String toString() {
+		return "Cliente: " + this.name + "\nE-Mail: " + this.email + "\nData de Nascimento: " +
+				sdf.format(this.birthDate);
+	}
 }

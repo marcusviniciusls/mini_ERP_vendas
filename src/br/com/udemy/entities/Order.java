@@ -48,6 +48,8 @@ public class Order {
 		this.status = status;
 		this.client = client;
 	}
+	
+	// Metodos Getteres and Setteres
 	public Client getClient() {
 		return client;
 	}
@@ -68,7 +70,13 @@ public class Order {
 		this.status = status;
 	}
 	
-	
+	// Método toString
+	public String toString() {
+		return "Ordem Resumida: \nData do Pedido: " + this.moment + "\nStatus do Pedido: " + this.status +
+				"\nCliente: " + this.client.getName() + " Data de Nascimento: " + this.client.getBirthDate() + 
+				" - E-mail: " + this.client.getEmail() + "\n Itens no Pedido: " + this.items.toString() + 
+				"\n\n Total Geral: R$" + this.total();
+	}
 	
 	
 }

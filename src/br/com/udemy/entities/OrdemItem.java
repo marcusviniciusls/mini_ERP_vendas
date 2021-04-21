@@ -41,7 +41,10 @@ public class OrdemItem {
 	public OrdemItem() {}
 	
 	
-	
-	
+	// Método toString	
+	public String toString() {
+		return "\nNome do Produto: " + this.getProduct().getNome() + "\nQuantidade: " + this.quatity + "\nValor Unitário: " +
+				this.price + "\nSub-Total R$ " + this.subTotal();
+	}
 	
 }
