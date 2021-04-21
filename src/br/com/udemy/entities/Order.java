@@ -14,6 +14,9 @@ public class Order {
 	private Date moment;
 	private OrderStatus status;	
 	private List<OrdemItem> items = new ArrayList<>();
+	private Client client;
+	
+	
 	
 	// Outros métodos
 	public void addItem(OrdemItem item) {
@@ -33,17 +36,24 @@ public class Order {
 		else {
 			JOptionPane.showInternalMessageDialog(null, "Não há valor para esse pedido");
 			return 0.0;
-		}
-		
+		}		
 	}
 	
 	// Construtores
-	public Order(Date moment, OrderStatus status) {
-		this.moment = moment;
-		this.status = status;
-	}
+	
 	public Order() {}
 	
+	public Order(Date moment, OrderStatus status, Client client) {
+		this.moment = moment;
+		this.status = status;
+		this.client = client;
+	}
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
 	// Métodos Getteres and Setteres
 	public Date getMoment() {
 		return moment;
