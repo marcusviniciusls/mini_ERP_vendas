@@ -4,7 +4,7 @@ public class Product {
 
 	// Atributos
 	private String nome;
-	private double price;
+	private Double price;
 	
 	// contrutores
 	public Product(String nome, double price) {
