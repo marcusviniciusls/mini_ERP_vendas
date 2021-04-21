@@ -1,9 +1,9 @@
-package br.com.udemy.entities;
+package br.com.udemy.mainapplication;
 
 public class Application {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
